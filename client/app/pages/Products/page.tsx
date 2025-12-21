@@ -18,7 +18,7 @@ export default function ProductsPage() {
   const [loading, setLoading] = useState(false);
 
   const filtered = filter === "All" ? products : products.filter((p) => p.category === filter);
-
+  
   useEffect(() => {
     setLoading(true);
     const t = setTimeout(() => setLoading(false), 300);
@@ -60,13 +60,15 @@ export default function ProductsPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {filtered.map((p) => (
             <Card key={p.id} className="overflow-hidden">
-              <Link className="flex justify-center items-center" href={`/pages/Detail/${p.id}`}>
-                <img
+              <Link className="" href={`/pages/Detail/${p.id}`}>
+              <div className="flex justify-center items-center">
+                   <img
                   src={p.image}
                   alt={p.name}
                   className="h-68 w-86 bg-cover  bg-center"
                 />
-              </Link>
+              </div>
+             
 
               <CardHeader>
                 <CardTitle className="line-clamp-1">{p.name}</CardTitle>
@@ -87,6 +89,7 @@ export default function ProductsPage() {
                   Add to Cart
                 </Button>
               </CardContent>
+               </Link>
             </Card>
           ))}
         </div>
