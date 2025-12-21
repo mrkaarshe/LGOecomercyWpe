@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 
-const API = "https://lgoecomercy.onrender.com/api";
+const API = "https://lgoecomercywpe.onrender.com/api";
 
 export default function AuthPage() {
   const [mode, setMode] = useState("login");            // "login" | "register"
