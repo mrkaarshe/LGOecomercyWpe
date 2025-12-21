@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Wireless Headphones",
+    "description": "High-quality wireless headphones with active noise cancellation, premium sound quality, and 30-hour battery life.",
+    "price": 199.99,
+    "image": "/headfones/1.jpeg",
+    "category": "Electronics",
+    "stock": 25,
+    "featured": true,
+    "top": true,
+    "gallery": [
+      "/headfones/2.jpeg",
+      "/headfones/3.jpeg",
+      "/headfones/4.jpeg",
+      "/headfones/5.jpeg",
+      "/headfones/6.jpeg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Smart Fitness Watch",
+    "description": "Track your fitness goals with this sleek smart watch featuring heart rate monitoring, GPS, and customizable workout plans.",
+    "price": 149.99,
+    "image": "/fitnesSmartwatch/5.jpeg",
+    "category": "Wearables",
+    "stock": 40,
+    "featured": true,
+    "top": false,
+    "gallery": [
+      "/fitnesSmartwatch/1.jpeg",
+      "/fitnesSmartwatch/2.jpeg",
+      "/fitnesSmartwatch/3.jpeg",
+      "/fitnesSmartwatch/4.jpeg",
+      "/fitnesSmartwatch/7.jpeg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "4K Ultra HD Smart TV",
+    "description": "Experience stunning visuals with this 55-inch 4K Ultra HD Smart TV. Features HDR support, built-in streaming apps, and voice control.",
+    "price": 599.99,
+    "image": "/4ktv/2.jpeg",
+    "category": "Home Entertainment",
+    "stock": 15,
+    "featured": false,
+    "top": true,
+    "gallery": [
+      "/4ktv/1.jpeg",
+      "/4ktv/3.jpeg",
+      "/4ktv/4.jpeg",
+      "/4ktv/5.jpeg",
+      "/4ktv/6.jpeg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Ergonomic Office Chair",
+    "description": "Stay comfortable during long work hours with this ergonomic office chair featuring adjustable height, lumbar support, and breathable mesh material.",
+    "price": 129.99,
+    "image": "/gamingChair/1.jpeg",
+    "category": "Furniture",
+    "stock": 30,
+    "featured": false,
+    "top": false,
+    "gallery": [
+      "/gamingChair/2.jpeg",
+      "/gamingChair/3.jpeg",
+      "/gamingChair/4.jpeg",
+      "/gamingChair/5.jpeg",
+      "/gamingChair/6.jpeg"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Bluetooth Portable Speaker",
+    "description": "Enjoy your music on the go with this compact Bluetooth portable speaker. Features rich sound, deep bass, and a 10-hour battery life.",
+    "price": 49.99,
+    "image": "/bluetothSpeaker/1.jpeg",
+    "category": "Audio",
+    "stock": 50,
+    "featured": true,
+    "top": false,
+    "gallery": [
+      "/bluetothSpeaker/2.jpeg",
+      "/bluetothSpeaker/3.jpeg",
+      "/bluetothSpeaker/6.jpeg",
+      "/bluetothSpeaker/5.jpeg",
+      "/bluetothSpeaker/7.jpeg"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "RX 6800 XT Gaming",
+    "description": "Graphics Card, 16GB of GDDR6 Memory, Powered by AMD RDNA 2, HDMI 2.1, WINDFORCE 3X Cooling System, GV-R68XTGAMING OC-16GDVisit the GIGABYTE Store",
+    "price": 179.99,
+    "image": "/graphicCard/1.jpeg",
+    "category": "gaming",
+    "stock": 20,
+    "featured": false,
+    "top": true,
+    "gallery": [
+      "/graphicCard/2.jpeg",
+      "/graphicCard/3.jpeg",
+      "/graphicCard/6.jpeg",
+      "/graphicCard/5.jpeg",
+      "/graphicCard/1.jpeg"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "3XS Vindicta Liquid Cooled Gaming PC",
+    "description": "RTX 5080 16GB | Ultra 7 265K 20-Core | 32GB RAM | 2TB M.2 SSD | Dynamic RGB Lighting | WiFi | Streaming Ready",
+    "price": 399.99,
+    "image": "/gaminPc/1.jpeg",
+    "category": "Audio",
+    "stock": 35,
+    "featured": true,
+    "top": false,
+    "gallery": [
+      "/gaminPc/2.jpeg",
+      "/gaminPc/4.jpeg",
+      "/gaminPc/6.jpeg",
+      "/gaminPc/5.jpeg",
+      "/gaminPc/7.jpeg"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "PlayStation 5 console",
+    "description": "Sony's powerful next-gen console featuring a custom AMD Zen 2 CPU and RDNA 2 GPU, enabling stunning 4K gaming at up to 120fps with ray tracing for realistic lighting, supported by a super-fast SSD for near-instant loading and 3D audio via the Tempest Engine",
+    "price": 459.99,
+    "image": "/ps5/1.jpeg",
+    "category": "Furniture",
+    "stock": 10,
+    "featured": false,
+    "top": true,
+    "gallery": [
+      "/ps5/2.jpeg",
+      "/ps5/4.jpeg",
+      "/ps5/6.jpeg",
+      "/ps5/5.jpeg",
+      "/ps5/1.jpeg"
+    ]
+  }
+]
