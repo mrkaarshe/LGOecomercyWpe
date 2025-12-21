@@ -1,6 +1,6 @@
 "use client";
 
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const reviews = [
@@ -11,22 +11,37 @@ const reviews = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold tracking-tight text-center mb-4">Loved by customers worldwide</h2>
-        <p className="text-center text-muted-foreground mb-12">Thousands of people trust us — here’s what a few have to say.</p>
+    <section className="py-24 px-6 bg-gradient-to-b from-background to-muted/30">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+          Loved by customers worldwide
+        </h2>
+        <p className="mt-4 max-w-xl mx-auto text-muted-foreground">
+          Thousands of people trust us — here’s what a few have to say.
+        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-12 grid gap-8 md:grid-cols-3">
           {reviews.map((r) => (
-            <Card key={r.name} className="relative">
-              <CardContent className="p-6 space-y-4">
+            <Card
+              key={r.name}
+              className="group relative overflow-hidden rounded-2xl border border-border/40 bg-card/60 shadow-lg backdrop-blur transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+            >
+              <CardContent className="flex h-full flex-col p-6">
+                <Quote className="mb-4 h-8 w-8 text-muted-foreground/20" />
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                    <Star
+                      key={i}
+                      className="h-5 w-5 fill-primary text-primary drop-shadow"
+                    />
                   ))}
                 </div>
-                <p className="text-sm italic text-muted-foreground">“{r.text}”</p>
-                <p className="text-sm font-semibold">- {r.name}</p>
+                <p className="mt-4 flex-1 italic text-foreground/90">
+                  “{r.text}”
+                </p>
+                <p className="mt-6 text-sm font-semibold tracking-wide text-accent-foreground">
+                  – {r.name}
+                </p>
               </CardContent>
             </Card>
           ))}

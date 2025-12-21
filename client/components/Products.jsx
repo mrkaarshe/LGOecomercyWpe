@@ -19,8 +19,8 @@ export const Products = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {products.map((product,index) => (
                 product.top === true && (
-                <Link href={`/pages/Detail/${product.id}`} key={index} className='bg-white/30 shadow rounded-lg p-4 mb-6 flex h-120 flex-col justify-between'>
-                    <img src={product.image} alt={product.name} className='w-full h-1/2 object-cover bg-cover rounded-md mr-4'/>
+                <Link href={`/pages/Detail/${product.id}`} key={index} className='bg-white/30 shadow rounded-lg p-4 mb-6 flex h- flex-col justify-between'>
+                    <img src={product.image} alt={product.name} className='w-68 h-86 object-cover bg-cover rounded-md mr-4'/>
                     <div className='flex flex-col justify-between'>
                         <div>
                             <h2 className='text-xl font-semibold mb-2'>{product.name}</h2>
