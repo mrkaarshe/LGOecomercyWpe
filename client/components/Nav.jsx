@@ -127,7 +127,7 @@ export default function Nav() {
             {mounted &&
               (user ? (
                 <Button size="sm" variant="outline">
-                  <Link href={'/pages/Profile'} className="flex justify-center items-center ">
+                  <Link href={'/pages/Profile'} className="flex text-black justify-center items-center ">
                      <User2 className=" h-4 w-4" />
                   @{user.name}
                   </Link>
