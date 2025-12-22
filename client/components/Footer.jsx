@@ -4,7 +4,7 @@ import { Van,Shield,RotateCcw,Headset } from 'lucide-react';
 export const Footer = () => {
   return (
     <div className=' min-h-50 bg-black text-white  w-full '>
-        <div className='max-w-7xl pt-15 border-b  border-gray-300 mx-auto flex justify-between items-center'>
+        <div className='max-w-7xl pt-15 border-b  border-gray-300 mx-auto grid grid-cols-2 md:grid-cols-4 justify-between items-center'>
             <div className='p-4 flex flex-col gap-2  justify-center items-center'>
                 <i className=' p-2 rounded border backdrop-blur-xl bg-white/10  border-white/20 '><Van size={28}/></i>
                <div>
