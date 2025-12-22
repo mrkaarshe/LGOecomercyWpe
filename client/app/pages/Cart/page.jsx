@@ -22,8 +22,6 @@ export default function CartPage() {
 
   const increasequantity = (id) =>{
     dispatch(increaseQuantity({id}))
-    
-    
   }
 
   useEffect(()=>{

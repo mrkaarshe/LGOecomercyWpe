@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
-
+import { toast } from "sonner";
 export default function ProductDetailPage() {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -40,7 +40,8 @@ export default function ProductDetailPage() {
         quantity: qty,
       })
     );
-    alert(`${product.name} added to cart!`);
+    toast.success(`${product.name} added to cart!`)
+    // alert(`${product.name} added to cart!`);
   };
 
   return (
@@ -49,11 +50,7 @@ export default function ProductDetailPage() {
         {/* Gallery */}
         <Card className="border-0 shadow">
           <CardContent className="p-2 space-y-4  ">
-            <img
-              src={activeImg}
-              alt={product.name}
-              className="w-full h-60 md:h-150  bg-cover bg-center rounded-xl"
-            />
+            <img src={activeImg} alt={product.name} className="w-full h-60 md:h-150  bg-cover bg-center rounded-xl"/>
 
             <div className="flex gap-3 overflow-x-auto pb-2">
               {[product.image, ...(product.gallery ?? [])].map((src, idx) => (
