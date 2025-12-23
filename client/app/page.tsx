@@ -13,7 +13,7 @@ export default function Home() {
    <Products />
    <ShopPyCategry />
    <Testmonilsm />
-   
+   <Footer/>
    </div>
   );
 }
