@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ReduxProvider>   {/* 👈 provider-ka client */}
           <Nav />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </ReduxProvider>
       </body>
     </html>

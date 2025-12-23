@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import Auth from '../module/AuthModule.js';
+import Auth from '../models/AuthModel.js';
 
 
 export const Register = async (req, res) => {
@@ -12,7 +12,7 @@ export const Register = async (req, res) => {
   }
 
   try {
-    // 2. check duplicate
+    
     const exists = await Auth.findOne({ email });
     if (exists) {
       return res.status(409).json({ message: 'Email already exists' });

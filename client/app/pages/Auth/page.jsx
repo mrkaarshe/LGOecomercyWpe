@@ -52,6 +52,7 @@ export default function AuthPage() {
   }
 
   return (
+    <>
     <main className="min-h-[70vh] grid place-items-center px-4">
       <Card className="w-full max-w-md">
         <CardHeader>
@@ -134,5 +135,6 @@ export default function AuthPage() {
         </CardContent>
       </Card>
     </main>
+     </>
   );
 }

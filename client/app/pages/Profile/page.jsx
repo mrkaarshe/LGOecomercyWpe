@@ -1,10 +1,10 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { LogOut, Package, User } from "lucide-react";
+import Orders from '@/components/Orders'
 import Link from "next/link";
 export default function AccountPage() {
   const [tab, setTab] = useState("profile");
@@ -74,6 +74,17 @@ export default function AccountPage() {
               <p className="text-sm text-muted-foreground">Email</p>
               <p className="font-medium">{user.email}</p>
             </div>
+             <div>
+              {!user.Role === 'admin' &&(
+                <>
+                <p className="text-sm text-muted-foreground">Admin Penal</p>
+                <Link href={'pages/saler'}>
+                LGO Admin Saller
+                </Link>
+               </>
+              )}
+            
+            </div>
             <Separator />
             <Button variant="ghost" className="gap-2" onClick={handleLogout}>
               <LogOut className="h-4 w-4" />
@@ -89,7 +100,7 @@ export default function AccountPage() {
             <CardTitle>My Orders</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground">You have no orders yet.</p>
+            <Orders/>
           </CardContent>
         </Card>
       )}
