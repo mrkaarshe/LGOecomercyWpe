@@ -1,5 +1,5 @@
 "use client"
-import { ArrowLeft, ArrowRightLeft, ListPlus, PackagePlus, ShoppingBag } from 'lucide-react'
+import { ArrowLeft, ArrowRightLeft, List, ListPlus, PackagePlus, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import { useState } from 'react'
@@ -33,9 +33,9 @@ const page = () => {
                     </Link>
                      <Link href={'/pages/saler/ProductsList'} className=' bg-black/99 hover:bg-black/10 p-4 text-white hover:text-black rounded-full font-bold flex gap-2 justify-cen items-center'>
                         <span>
-                            <ListPlus size={25}/>
+                            <List size={25}/>
                         </span>
-                        <p className={`${isopen ? "block" :"hidden"}`}>Add List</p>
+                        <p className={`${isopen ? "block" :"hidden"}`}>Products List</p>
 
                     </Link>
                      <Link href={'/pages/saler/Orders'} className=' bg-black/99 hover:bg-black/10 p-4 text-white hover:text-black rounded-full font-bold flex gap-2 justify-cen items-center'>
