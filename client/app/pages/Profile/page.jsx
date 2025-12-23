@@ -75,10 +75,10 @@ export default function AccountPage() {
               <p className="font-medium">{user.email}</p>
             </div>
              <div>
-              {!user.Role === 'admin' &&(
+              {user.Role == 'admin' &&(
                 <>
                 <p className="text-sm text-muted-foreground">Admin Penal</p>
-                <Link href={'pages/saler'}>
+                <Link href={'/pages/saler'}>
                 LGO Admin Saller
                 </Link>
                </>
