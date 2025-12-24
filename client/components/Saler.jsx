@@ -6,7 +6,7 @@ import { useState } from 'react'
 const page = () => {
     const [isopen ,setIsopen] = useState(false)
   return (
-    <div className={`-translate-x-22  md:translate-0 ${isopen ? "translate-x-0" : ""}  bg-white/95 bottom-0 absolute top-20 md:top-0  left-0  md:relative  min-h-[90vh]`}>
+    <div className={`-translate-x-22  md:translate-0 ${isopen ? "translate-x-0" : ""}  bg-white/95 bottom-0 absolute top-20 md:top-2  left-0  md:relative  min-h-[90vh]`}>
         <aside  className={`${isopen ? "w-60 transition-all" : "w-[100px]"}  relative  min-h-screen w-60 border-r mt-4 gap-3  rounded-tr-2xl flex flex-col  p-4`}>
             <div onClick={()=> setIsopen(!isopen)} className=' border-white/10 absolute  top-1/2 -right-10 bg-[#333] p-5 rounded-full'>
                 <i className=' text-white'><ArrowRightLeft/></i>

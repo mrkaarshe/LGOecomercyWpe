@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const categories = ["All", "Electronics", "Home Entertainment", "Storage", "Furniture", "Audio", "Wearables"];
+const categories = ["All", "Electronics",  "Storage","Gaming", "Audio", "Wearables"]
 
 export default function ProductsPage() {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ export default function ProductsPage() {
   
 
   return (
-    <main className="max-h-280 ml-3 overflow-auto py-10 px-3">
+    <main className="max-h-280 ml-3 overflow-auto py-10  px-3">
       <header className="mb-10">
         <h1 className="text-3xl font-bold tracking-tight">Our Products</h1>
         <p className="text-muted-foreground">Explore our range of innovative products.</p>
@@ -48,7 +48,7 @@ export default function ProductsPage() {
           <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {filtered.map((p) => (
             <Card key={p.id} className="overflow-hidden">
               <Link className="" href={`/pages/Detail/${p.id}`}>

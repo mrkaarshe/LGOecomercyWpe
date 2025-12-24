@@ -3,68 +3,69 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const IMAGES = [
-  "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://i.pinimg.com/1200x/19/ba/7c/19ba7c5d7972d930b3b011e0b80e6cc9.jpg",
-  "https://i.pinimg.com/1200x/f1/d1/24/f1d1246feb161df07575c46967d31119.jpg",
-  "https://i.pinimg.com/1200x/5f/41/9d/5f419ddbbf75d98176783987e3439465.jpg",
+  "https://i.pinimg.com/1200x/cc/b8/a1/ccb8a11d7f936ee401459aee31fff9e3.jpg",
+  "https://i.pinimg.com/474x/89/ad/0a/89ad0adfaf7a2b5ad81f07bdd51a8b49.jpg",
+  "https://i.pinimg.com/1200x/d8/61/59/d861596e77d84dd2333181493ab928b5.jpg",
 ];
 
-export const  Header = ()  =>{
+export const Header = () => {
   const [idx, setIdx] = useState(0);
 
-  
   useEffect(() => {
-    const t = setInterval(() => 
-      setIdx((i) => (i + 1) % IMAGES.length), 4000);
+    const t = setInterval(() => setIdx((i) => (i + 1) % IMAGES.length), 5000);
     return () => clearInterval(t);
   }, []);
 
   return (
-    <section className="relative h-[92vh] grid place-items-center overflow-hidden text-white">
-      {/* background sliding image */}
+    <section className="relative h-[100vh] w-full overflow-hidden text-white font-sans">
+      {/* Background sliding images */}
       <div
-        className="absolute inset-0 z-0 bg-no-repeat bg-cover bg-center transition-all duration-1000"
+        className="absolute inset-0 z-0 bg-center bg-cover transition-all duration-1000"
         style={{ backgroundImage: `url(${IMAGES[idx]})` }}
       >
-        <div className="absolute inset-0 bg-black/30 backdrop-blur-xs" />
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
       </div>
 
-      {/* foreground content */}
-      <div className="relative z-10 text-center px-6 max-w-7xl">
-        <h1 className="text-7xl md:text-9xl font-extrabold mb-4">
-          Discover Quality Products For  <br /> Evry Need
+      {/* Foreground content */}
+      <div className="relative z-10 flex flex-col justify-center items-center h-full text-center px-6 md:px-20">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 leading-tight">
+          Ultimate Gaming & Electronics <br /> For Every Setup
         </h1>
-        <p className="text-lg md:text-xl mb-6">
-          Shop smartphones, laptops, cameras & more with free shipping and
-          secure checkout.
-           Shop smartphones, laptops, cameras & more with free shipping and
-          secure checkout.
+        <p className="text-lg md:text-xl max-w-2xl mb-6 text-gray-300">
+          Explore top-tier gaming peripherals, laptops, monitors & more. 
+          Elevate your setup with style and performance.
         </p>
-        <div className="flex gap-4 justify-center">
+
+        <div className="flex flex-col md:flex-row gap-4">
           <Link href="/pages/Products">
-            <button className="rounded-lg bg-black px-6 py-3 font-semibold hover:bg-gray-800">
+            <button className="px-8 py-3 font-semibol bg-black text-white rounded-lg shadow-lg hover:scale-105 transform transition">
               Shop Now
             </button>
           </Link>
-          <button className="rounded-lg px-6 py-3 font-semibold border border-white hover:bg-white hover:text-black">
-            Learn More
-          </button>
+          <Link href="#learn">
+            <button className="px-8 py-3 font-semibold border rounded-lg text-white hover:bg-white hover:text-black transition">
+              Learn More
+            </button>
+          </Link>
         </div>
       </div>
 
-      {/* simple dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+      {/* Dots Navigation */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
         {IMAGES.map((_, i) => (
           <button
             key={i}
             onClick={() => setIdx(i)}
-            className={`h-2 rounded-full transition-all ${
-              i === idx ? "w-6 bg-white" : "w-2 bg-white/50"
+            className={`h-3 rounded-full transition-all duration-300 ${
+              i === idx ? "w-8 bg-black shadow-lg" : "w-3 bg-white/30"
             }`}
           />
         ))}
       </div>
+
+      {/* Optional Gaming Accent Shapes */}
+      <div className="absolute top-10 left-0 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-0 right-10 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
     </section>
   );
-}
+};

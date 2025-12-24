@@ -20,7 +20,7 @@ export default function Testimonials() {
           Thousands of people trust us — here’s what a few have to say.
         </p>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
+        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {reviews.map((r) => (
             <Card
               key={r.name}

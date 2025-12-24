@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import cartReducer, { saveMiddleware, hydrateCart } from './cartSlice';
-
+import Orders ,{addToOrder} from '@/app/Store/OrderSlice'
 export const store = configureStore({
   reducer: {
     cart: cartReducer,
-    /* …other slices… */
+    orders : Orders
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(saveMiddleware),

@@ -27,7 +27,7 @@ export default function AccountPage() {
   /* while we wait for mount OR after logout */
   if (!user) {
     return (
-      <main className="container mx-auto min-h-[70vh] py-10">
+      <main className="container mx-auto min-h-[70vh] mt-20 py-10">
         <h1 className="text-3xl font-bold">My Account</h1>
         <p className="mt-4 text-muted-foreground">Please log in to see your account.</p>
       </main>
@@ -36,7 +36,7 @@ export default function AccountPage() {
 
   /* ------------------  render when we have data  ------------------ */
   return (
-    <main className="container mx-auto min-h-[70vh] p-3">
+    <main className="container mx-auto min-h-[70vh] mt-20 p-3">
       <h1 className="text-3xl font-bold tracking-tight mb-8">My Account</h1>
 
       {/* Tabs */}

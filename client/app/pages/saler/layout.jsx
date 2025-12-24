@@ -2,7 +2,7 @@ import React from 'react'
 import Saler from  '../../../components/Saler'
  const layout = ({children}) => {
   return (
-    <div className=' max-h-[90vh] overflow-hidden flex'>
+    <div className=' max-h-[90vh] mt-15 overflow-hidden flex'>
         <Saler/>
         {children}
     </div>

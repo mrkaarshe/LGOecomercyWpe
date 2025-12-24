@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingCart, User, User2, Menu, X } from "lucide-react";
 
-const API = "http://localhost:3232/api";
+const API = "https://lgoecomercywpe.onrender.com/api";
 
 export default function Nav() {
   const router = useRouter();
@@ -88,13 +88,13 @@ export default function Nav() {
   /* ----------  render  ---------- */
   return (
     <>
-      <div className="h-20 " />
+      
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-          scrolled ? "bg-black text-white shadow-md" : "bg-background text-black shadow-md"
+        className={`fixed top-0 left-0 right-0 z-50 rounded-b-md transition-colors duration-300 ${
+          scrolled ? "bg-black text-white shadow-md" : "bg-white/30 backdrop-blur-xs text-black shadow"
         }`}
       >
-        <div className="container mx-auto h-20 flex items-center justify-between px-3 md:px-0">
+        <div className="container mx-auto h-20 flex items-center justify-between px-3 md:px-4">
           <Link href="/" className="text-xl font-bold">
             LGO
           </Link>

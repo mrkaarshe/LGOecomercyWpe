@@ -32,7 +32,7 @@ export default function CartPage() {
 
   if (items.length === 0)
     return (
-      <div className="max-w-sm min-h-[70vh] flex flex-col justify-center items-center mx-auto px-6">
+      <div className="max-w-sm min-h-[70vh]  flex flex-col justify-center items-center mx-auto px-6">
         <ShoppingBag size={98} className="mx-auto text-gray-400" />
         <h1 className="text-4xl font-bold mt-10">Your cart is empty</h1>
         <p className="text-gray-600 mt-2">Add some products to get started!</p>
@@ -48,10 +48,10 @@ export default function CartPage() {
     );
 
   return (
-    <div className="container min-h-[70vh] mx-auto px-6">
+    <div className="container min-h-[70vh] mt-26 mx-auto px-6">
       <h1 className="text-4xl font-bold mt-10">My Cart</h1>
 
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* ----------  ITEMS  ---------- */}
         <div className="md:col-span-2 flex flex-col gap-4 max-h-[600px] rounded-md  overflow-y-auto">
           {items.map((item) => (
