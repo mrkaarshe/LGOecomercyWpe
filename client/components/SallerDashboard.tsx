@@ -217,52 +217,52 @@ const SallerDashboard = () => {
     <div className='ml-4 md:ml-5 mt-10 container mx-auto'>
         <main className='grid grid-cols-1 md:grid-cols-2 pb-5 lg:grid-cols-3 xl:grid-cols-4 gap-1'>
       {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"> */}
-  <Card className="group relative overflow-hidden rounded-2xl max-w-xs md:max-w-full bg-black text-white border-l-8  border-l-blue-500 backdrop-blur-xl  transition hover:-translate-y-1 hover:shadow-2xl">
+  <Card className="group relative overflow-hidden rounded-2xl max-w-[380px]  md:max-w-full bg-black text-white border-l-8  border-l-[#8f8f8f] backdrop-blur-xl  transition hover:-translate-y-1 hover:shadow-2xl">
           <div className="p-5 flex items-center justify-between">
             <div>
               <p className="text-sm text-white">Total Orders</p>
               <h2 className="text-3xl font-bold mt-1">120</h2>
             </div>
-            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-blue-500/20 text-white shadow-md">
+            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-[#8f8f8f] text-white shadow-md">
               <ShoppingBag />
             </div>
           </div>
         </Card>
 
         {/* Revenue */}
-        <Card className="group relative overflow-hidden rounded-2xl max-w-xs md:max-w-full bg-black text-white  border-l-8  border-l-emerald-500  backdrop-blur-xl shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
+        <Card className="group relative overflow-hidden rounded-2xl max-w-[380px]  md:max-w-full bg-black text-white  border-l-8   border-l-[#8f8f8f]   backdrop-blur-xl shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
           <div className="p-5 flex items-center justify-between">
             <div>
               <p className="text-sm text-white">Revenue</p>
               <h2 className="text-3xl font-bold mt-1">$8,540</h2>
             </div>
-            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-emerald-500/20 text-white shadow-md">
+            <div className="flex h-16 w-16 items-center justify-center rounded-xl  bg-[#8f8f8f]  text-white shadow-md">
               <DollarSign />
             </div>
           </div>
         </Card>
 
         {/* Products */}
-        <Card className="group relative overflow-hidden rounded-2xl max-w-xs md:max-w-full bg-black text-white border-l-8 border-l-violet-500  shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
+        <Card className="group relative overflow-hidden rounded-2xl max-w-[380px]  md:max-w-full bg-black text-white border-l-8  border-l-[#8f8f8f]   shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
           <div className="p-5 flex items-center justify-between">
             <div>
               <p className="text-sm text-white">Products</p>
               <h2 className="text-3xl font-bold mt-1">45</h2>
             </div>
-            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-violet-500/30 text-white shadow-md">
+            <div className="flex h-16 w-16 items-center justify-center rounded-xl  bg-[#8f8f8f]  text-white shadow-md">
               <Package />
             </div>
           </div>
         </Card>
 
         {/* Customers */}
-        <Card className="group relative overflow-hidden rounded-2xl max-w-xs md:max-w-full bg-black text-white border-l-8 border-l-orange-500  backdrop-blur-xl shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
+        <Card className="group relative overflow-hidden rounded-2xl max-w-[380px]  md:max-w-full bg-black text-white border-l-8  border-l-[#8f8f8f]   backdrop-blur-xl shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
           <div className="p-5 flex items-center justify-between">
             <div>
               <p className="text-sm text-white">Customers</p>
               <h2 className="text-3xl font-bold mt-1">310</h2>
             </div>
-            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-orange-500/50 text-white shadow-md">
+            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-[#8f8f8f] text-white shadow-md">
               <Users />
             </div>
           </div>
@@ -274,7 +274,7 @@ const SallerDashboard = () => {
         <section className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4'>
               
     <ChartsArea/>
-      {/* <Table className='border border-white/20 shadow min-h-100 max-w-xs md:max-w-full  rounded-2xl p-5 z-0 '>
+      {/* <Table className='border border-white/20 shadow min-h-100 max-w-[380px]  md:max-w-full  rounded-2xl p-5 z-0 '>
      
       <TableHeader className='min-h-30' >
         <TableRow className='bg-black text-white'>
