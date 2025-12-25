@@ -51,7 +51,7 @@ export const  TableOrders = () => {
     <div className="">
       <h1 className="text-xl font-semibold mb-4">Dashboard Orders</h1>
 
-      <Table className="max-w-[380px] md:max-w-full ">
+      <Table className="w-full ">
         <TableHeader>
           <TableRow className="bg-black hover:bg-black/80 rounded-2xl">
             <TableHead className="text-white">Name</TableHead>
