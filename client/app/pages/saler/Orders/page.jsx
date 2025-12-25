@@ -48,13 +48,13 @@ const Page = () => {
               <Box size={48} />
             </span>
             <div className='text-gray-700 text-sm'>
-{order.products?.map((p) => (
-    <div>
-        <p>{p.productTitle}</p>
-        <p>items: x{p.quantity}</p>
-        <p>price: {p.price}</p>
-    </div>
-))}
+          {order.products?.map((p) => (
+              <div>
+                  <p>{p.productTitle}</p>
+                  <p>items: x{p.quantity}</p>
+                  <p>price: {p.price}</p>
+              </div>
+          ))}
 
             </div>
           </div>

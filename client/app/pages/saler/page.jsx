@@ -8,7 +8,7 @@ import SallerDashboard from '@/components/SallerDashboard'
 const page = () => {
     const [isopen ,setIsopen] = useState(false)
   return (
-    <div className='overflow-x-hidden'>
+    <div className='overflow-x-hidden w-screen'>
       <SallerDashboard/>
     </div>
    

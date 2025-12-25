@@ -20,8 +20,8 @@ export const Header = () => {
     <section className="relative h-[100vh] w-full overflow-hidden text-white font-sans">
       {/* Background sliding images */}
       <div
-        className="absolute inset-0 z-0 bg-center bg-cover transition-all duration-1000"
-        style={{ backgroundImage: `url(${IMAGES[idx]})` }}
+        className="absolute inset-0 z-0 bg-center bg-cover  transition-all duration-1000"
+        style={{ backgroundImage: `url(${IMAGES[idx]}) ` }}
       >
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
       </div>
@@ -57,7 +57,7 @@ export const Header = () => {
             key={i}
             onClick={() => setIdx(i)}
             className={`h-3 rounded-full transition-all duration-300 ${
-              i === idx ? "w-8 bg-black shadow-lg" : "w-3 bg-white/30"
+              i === idx ? "w-8 bg-white shadow-lg" : "w-3 bg-white/30"
             }`}
           />
         ))}

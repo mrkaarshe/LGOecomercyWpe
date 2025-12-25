@@ -8,6 +8,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import{TableOrders} from '@/components/TableOrders'
+import {ChartsArea} from '@/components/ChartsArea'
 import {
   ChartContainer,
   ChartLegend,
@@ -16,6 +18,13 @@ import {
   ChartTooltipContent,
   type ChartConfig,
 } from '@/components/ui/chart'
+import {
+  ShoppingCart,
+  DollarSign,
+  Package,
+  Users,
+  ShoppingBag,
+} from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -205,186 +214,69 @@ const SallerDashboard = () => {
     return date >= startDate
   })
   return (
-    <div className='ml-5 mt-10'>
-        <main className='grid grid-cols-1 md:grid-cols-2 pb-5 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
-            <Card className="min-w-70 max-w-sm rounded-4xl p-5 border-2">
-            <CardTitle className="flex justify-between items-center ">
-                <p className='text-gray-600'>Total Review</p>
-                <span>+12.5%</span>
-            </CardTitle>
-            <CardContent>
-                <p className='text-4xl font-bold'>$1,250.00</p>
-            </CardContent>
-            <CardDescription>
-                <p className='text-xs'>Trending up this month Lor repudianda voluptatem aquibusdam ex.</p>
-            </CardDescription>
-            <CardFooter>
-                <p className='text-xs'>Visitors for the last 6 months</p>
-            </CardFooter>
+    <div className='ml-4 md:ml-5 mt-10 container mx-auto'>
+        <main className='grid grid-cols-1 md:grid-cols-2 pb-5 lg:grid-cols-3 xl:grid-cols-4 gap-1'>
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"> */}
+  <Card className="group relative overflow-hidden rounded-2xl max-w-sm md:max-w-full bg-black text-white border-l-8  border-l-blue-500 backdrop-blur-xl  transition hover:-translate-y-1 hover:shadow-2xl">
+          <div className="p-5 flex items-center justify-between">
+            <div>
+              <p className="text-sm text-white">Total Orders</p>
+              <h2 className="text-3xl font-bold mt-1">120</h2>
+            </div>
+            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-blue-500/20 text-white shadow-md">
+              <ShoppingBag />
+            </div>
+          </div>
         </Card>
 
-        {/* 2 */}
-        <Card className="min-w-70 max-w-sm rounded-4xl p-5 border-2">
-            <CardTitle className="flex justify-between items-center ">
-                <p className='text-gray-600'>Total Review</p>
-                <span>+12.5%</span>
-            </CardTitle>
-            <CardContent>
-                <p className='text-4xl font-bold'>$1,250.00</p>
-            </CardContent>
-            <CardDescription>
-                <p className='text-xs'>Trending up this month Lor repudianda voluptatem aquibusdam ex.</p>
-            </CardDescription>
-            <CardFooter>
-                <p className='text-xs'>Visitors for the last 6 months</p>
-            </CardFooter>
+        {/* Revenue */}
+        <Card className="group relative overflow-hidden rounded-2xl max-w-sm md:max-w-full bg-black text-white  border-l-8  border-l-emerald-500  backdrop-blur-xl shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
+          <div className="p-5 flex items-center justify-between">
+            <div>
+              <p className="text-sm text-white">Revenue</p>
+              <h2 className="text-3xl font-bold mt-1">$8,540</h2>
+            </div>
+            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-emerald-500/20 text-white shadow-md">
+              <DollarSign />
+            </div>
+          </div>
         </Card>
-        {/* 3 */}
-        <Card className="min-w-70 max-w-sm rounded-4xl p-5 border-2">
-            <CardTitle className="flex justify-between items-center ">
-                <p className='text-gray-600'>Total Review</p>
-                <span>+12.5%</span>
-            </CardTitle>
-            <CardContent>
-                <p className='text-4xl font-bold'>$1,250.00</p>
-            </CardContent>
-            <CardDescription>
-                <p className='text-xs'>Trending up this month Lor repudianda voluptatem aquibusdam ex.</p>
-            </CardDescription>
-            <CardFooter>
-                <p className='text-xs'>Visitors for the last 6 months</p>
-            </CardFooter>
+
+        {/* Products */}
+        <Card className="group relative overflow-hidden rounded-2xl max-w-sm md:max-w-full bg-black text-white border-l-8 border-l-violet-500  shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
+          <div className="p-5 flex items-center justify-between">
+            <div>
+              <p className="text-sm text-white">Products</p>
+              <h2 className="text-3xl font-bold mt-1">45</h2>
+            </div>
+            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-violet-500/30 text-white shadow-md">
+              <Package />
+            </div>
+          </div>
         </Card>
-        {/* 4 */}
-        <Card className="min-w-70 max-w-sm rounded-4xl p-5 border-2">
-            <CardTitle className="flex justify-between items-center ">
-                <p className='text-gray-600'>Total Review</p>
-                <span>+12.5%</span>
-            </CardTitle>
-            <CardContent>
-                <p className='text-4xl font-bold'>$1,250.00</p>
-            </CardContent>
-            <CardDescription>
-                <p className='text-xs'>Trending up this month Lor repudianda voluptatem aquibusdam ex.</p>
-            </CardDescription>
-            <CardFooter>
-                <p className='text-xs'>Visitors for the last 6 months</p>
-            </CardFooter>
+
+        {/* Customers */}
+        <Card className="group relative overflow-hidden rounded-2xl max-w-sm md:max-w-full bg-black text-white border-l-8 border-l-orange-500  backdrop-blur-xl shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
+          <div className="p-5 flex items-center justify-between">
+            <div>
+              <p className="text-sm text-white">Customers</p>
+              <h2 className="text-3xl font-bold mt-1">310</h2>
+            </div>
+            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-orange-500/50 text-white shadow-md">
+              <Users />
+            </div>
+          </div>
         </Card>
+      {/* </div> */}
+
+        
         </main>
-        <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        <section className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4'>
               
-    <Card className="pt-0">
-      <CardHeader className="flex items-center gap-2 space-y-0 border-b py-5 sm:flex-row">
-        <div className="grid flex-1 gap-1">
-          <CardTitle>Area Chart - Interactive</CardTitle>
-          <CardDescription>
-            Showing total visitors for the last 3 months
-          </CardDescription>
-        </div>
-        <Select value={timeRange} onValueChange={setTimeRange}>
-          <SelectTrigger
-            className="hidden w-[160px] rounded-lg sm:ml-auto sm:flex"
-            aria-label="Select a value"
-          >
-            <SelectValue placeholder="Last 3 months" />
-          </SelectTrigger>
-          <SelectContent className="rounded-xl">
-            <SelectItem value="90d" className="rounded-lg">
-              Last 3 months
-            </SelectItem>
-            <SelectItem value="30d" className="rounded-lg">
-              Last 30 days
-            </SelectItem>
-            <SelectItem value="7d" className="rounded-lg">
-              Last 7 days
-            </SelectItem>
-          </SelectContent>
-        </Select>
-      </CardHeader>
-      <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
-        <ChartContainer
-          config={chartConfig}
-          className="aspect-auto h-[250px] w-full"
-        >
-          <AreaChart data={filteredData}>
-            <defs>
-              <linearGradient id="fillDesktop" x1="0" y1="0" x2="0" y2="1">
-                <stop
-                  offset="5%"
-                  stopColor="var(--color-desktop)"
-                  stopOpacity={0.8}
-                />
-                <stop
-                  offset="95%"
-                  stopColor="var(--color-desktop)"
-                  stopOpacity={0.1}
-                />
-              </linearGradient>
-              <linearGradient id="fillMobile" x1="0" y1="0" x2="0" y2="1">
-                <stop
-                  offset="5%"
-                  stopColor="var(--color-mobile)"
-                  stopOpacity={0.8}
-                />
-                <stop
-                  offset="95%"
-                  stopColor="var(--color-mobile)"
-                  stopOpacity={0.1}
-                />
-              </linearGradient>
-            </defs>
-            <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="date"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-              minTickGap={32}
-              tickFormatter={(value) => {
-                const date = new Date(value)
-                return date.toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                })
-              }}
-            />
-            <ChartTooltip
-              cursor={false}
-              content={
-                <ChartTooltipContent
-                  labelFormatter={(value) => {
-                    return new Date(value).toLocaleDateString("en-US", {
-                      month: "short",
-                      day: "numeric",
-                    })
-                  }}
-                  indicator="dot"
-                />
-              }
-            />
-            <Area
-              dataKey="mobile"
-              type="natural"
-              fill="url(#fillMobile)"
-              stroke="var(--color-mobile)"
-              stackId="a"
-            />
-            <Area
-              dataKey="desktop"
-              type="natural"
-              fill="url(#fillDesktop)"
-              stroke="var(--color-desktop)"
-              stackId="a"
-            />
-            <ChartLegend content={<ChartLegendContent />} />
-          </AreaChart>
-        </ChartContainer>
-      </CardContent>
-    </Card>
-      <Table className='border rounded p-5 z-0'>
-      <TableCaption>A list of your recent invoices.</TableCaption>
-      <TableHeader >
+    <ChartsArea/>
+      {/* <Table className='border border-white/20 shadow min-h-100 max-w-sm md:max-w-full  rounded-2xl p-5 z-0 '>
+     
+      <TableHeader className='min-h-30' >
         <TableRow className='bg-black text-white'>
           <TableHead className="w-[100px]  text-white">Invoice</TableHead>
           <TableHead className='text-white'>Status</TableHead>
@@ -408,7 +300,8 @@ const SallerDashboard = () => {
           <TableCell className="text-">$2,500.00</TableCell>
         </TableRow>
       </TableFooter>
-    </Table>
+    </Table> */}
+    <TableOrders/>
         </section>
     </div>
   )
