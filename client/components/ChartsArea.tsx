@@ -140,7 +140,7 @@ export const ChartsArea = () =>  {
   )
 
   return (
-    <Card className="py-0 max-w-[380px] md:max-w-full">
+    <Card className="py-0 max-w-sm  md:max-w-full">
       <CardHeader className="flex flex-col bg-black rounded-2xl text-white items-stretch border-b !p-0 sm:flex-row">
         <div className="flex flex-1 flex-col justify-center gap-1 px-6 pt-4 pb-3 sm:!py-0">
           <CardTitle>Bar Chart - Interactive</CardTitle>
