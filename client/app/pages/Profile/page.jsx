@@ -74,6 +74,7 @@ export default function AccountPage() {
               <p className="text-sm text-muted-foreground">Email</p>
               <p className="font-medium">{user.email}</p>
             </div>
+             <Separator />
              <div>
               {user.Role == 'admin' &&(
                 <>

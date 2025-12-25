@@ -55,10 +55,14 @@ export const  TableOrders = () => {
         <TableHeader>
           <TableRow className="bg-black hover:bg-black/80 rounded-2xl">
             <TableHead className="text-white">Name</TableHead>
-            <TableHead className="text-white">Product</TableHead>
-            <TableHead className="text-white">Qty</TableHead>
+            <TableHead className="text-white">Email</TableHead>
+            <TableHead className="text-white">Phone</TableHead>
+            <TableHead className="text-white">City</TableHead>
+            <TableHead className="text-white">Product</TableHead>           
+             <TableHead className="text-white">Qty</TableHead>
             <TableHead className="text-white">Status</TableHead>
             <TableHead className="text-white">Date</TableHead>
+
           </TableRow>
         </TableHeader>
 
@@ -67,13 +71,18 @@ export const  TableOrders = () => {
             order.products.map((product, i) => (
               <TableRow key={`${order._id}-${i}`}>
                 <TableCell >{order.info.name}</TableCell>
+                <TableCell >{order.info?.email}</TableCell>
+                <TableCell >{order.info?.phone}</TableCell>
+                <TableCell >{order.info?.city}</TableCell>
                 <TableCell >{product.productTitle}</TableCell>
-                <TableCell >{product.quantity}</TableCell>
+                <TableCell >{product.quantity } x items</TableCell>
                 <TableCell >
-                  <Badge variant="secondary">{order.status}</Badge>
+                  <Badge className="text-green-500 border border-green-500 bg-green-400/20" variant="secondary">{order.status}</Badge>
                 </TableCell>
                 <TableCell >
                   {new Date(order.createdAt).toLocaleDateString()}
+                  {" / "}
+                  {new Date(order.createdAt).toLocaleTimeString()}
                 </TableCell>
               </TableRow>
             ))

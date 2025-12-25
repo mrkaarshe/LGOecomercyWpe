@@ -223,7 +223,7 @@ const SallerDashboard = () => {
               <p className="text-sm text-white">Total Orders</p>
               <h2 className="text-3xl font-bold mt-1">120</h2>
             </div>
-            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-[#8f8f8f] text-white shadow-md">
+            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-[#383838] text-white shadow-md">
               <ShoppingBag />
             </div>
           </div>
@@ -236,7 +236,7 @@ const SallerDashboard = () => {
               <p className="text-sm text-white">Revenue</p>
               <h2 className="text-3xl font-bold mt-1">$8,540</h2>
             </div>
-            <div className="flex h-16 w-16 items-center justify-center rounded-xl  bg-[#8f8f8f]  text-white shadow-md">
+            <div className="flex h-16 w-16 items-center justify-center rounded-xl  bg-[#383838]  text-white shadow-md">
               <DollarSign />
             </div>
           </div>
@@ -249,7 +249,7 @@ const SallerDashboard = () => {
               <p className="text-sm text-white">Products</p>
               <h2 className="text-3xl font-bold mt-1">45</h2>
             </div>
-            <div className="flex h-16 w-16 items-center justify-center rounded-xl  bg-[#8f8f8f]  text-white shadow-md">
+            <div className="flex h-16 w-16 items-center justify-center rounded-xl  bg-[#383838]  text-white shadow-md">
               <Package />
             </div>
           </div>
@@ -262,7 +262,7 @@ const SallerDashboard = () => {
               <p className="text-sm text-white">Customers</p>
               <h2 className="text-3xl font-bold mt-1">310</h2>
             </div>
-            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-[#8f8f8f] text-white shadow-md">
+            <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-[#383838] text-white shadow-md">
               <Users />
             </div>
           </div>
